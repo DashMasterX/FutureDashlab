@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard Ultimate 3D PRO MAX</title>
+<link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<button id="themeToggle">Tema </button>
+<div class="toast" id="toast"></div>
+
+<header>
+<h1>Dashboard Ultimate 3D PRO MAX</h1>
+<p>Multiusuário em tempo real com gráficos 3D!</p>
+</header>
+
+<section id="painel-section">
+<div id="painel">
+<h3>Contadores, Gráficos e Histórico</h3>
+<div id="usuariosOnline">Usuários Online: 1</div>
+<div class="buttons">
+<button onclick="increment('Tarefas')">+ Tarefas</button>
+<button onclick="decrement('Tarefas')">- Tarefas</button>
+<button onclick="increment('Metas')">+ Metas</button>
+<button onclick="decrement('Metas')">- Metas</button>
+<button onclick="increment('Projetos')">+ Projetos</button>
+<button onclick="decrement('Projetos')">- Projetos</button>
+<button onclick="increment('Mensagens')">+ Mensagens</button>
+<button onclick="decrement('Mensagens')">- Mensagens</button>
+</div>
+
+<div id="progressBars">
+<div>Tarefas<div class="progress"><div class="progress-bar" id="progressTarefas"></div></div></div>
+<div>Metas<div class="progress"><div class="progress-bar" id="progressMetas"></div></div></div>
+<div>Projetos<div class="progress"><div class="progress-bar" id="progressProjetos"></div></div></div>
+<div>Mensagens<div class="progress"><div class="progress-bar" id="progressMensagens"></div></div></div>
+</div>
+
+<canvas id="grafico"></canvas>
+<canvas id="graficoLinha"></canvas>
+<canvas id="graficoDoughnut"></canvas>
+
+<div id="historico"><strong>Histórico de Ações:</strong></div>
+</div>
+</section>
+
+<section id="contato">
+<h2>Contato</h2>
+<form id="contactForm">
+<input type="text" placeholder="Seu Nome" required>
+<input type="email" placeholder="Seu Email" required>
+<textarea placeholder="Sua Mensagem" rows="5" required></textarea>
+<button type="submit" class="submit">Enviar Mensagem</button>
+</form>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
